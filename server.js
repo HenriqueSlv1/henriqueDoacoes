@@ -11,6 +11,12 @@ app.use(express.json())
 const dados = require("./data/organizacoes.json")
 
 
+app.get('/doacoes', (req, res) => {
+
+        return res.json(dados.doacoes);
+    
+});
+
 
 app.post('/doacoes', (req, res) => {
     const novoDoacao = req.body;
