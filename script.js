@@ -41,7 +41,7 @@ function deletarDoacoes(id) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Doação excluída com sucesso:', data)
+        alert('Doação excluída com sucesso:', data)
         carregarDoacoes()
     })
     .catch(error => {
