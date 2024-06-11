@@ -13,9 +13,7 @@
     </header>
 
     <main id="paginaInicial">
-        <form  onsubmit="event.preventDefault(); addDoacoes()">
-          
-
+        <form id="formDoacao" onsubmit="event.preventDefault(); addDoacoes()">
             <label for="nomeDoador">Nome do Doador</label>
             <input type="text" id="nomeDoador" name="nomeDoador" required>
 
@@ -31,16 +29,13 @@
             <label for="dataValidade">Data de Validade (opcional):</label>
             <input type="date" id="dataValidade" name="dataValidade">
 
-            <input type="submit">Doar Agora</input>
+            <input type="submit" value="Doar Agora">
         </form>
     </main>
 
     <main id="paginaResultados" style="display: none;">
         <h2>Organizações de Caridade que Aceitam Doações de Alimentos</h2>
-        <ul id="organizacoesLista">
-
-        </ul>
-
+        <ul id="organizacoesLista"></ul>
         <div id="modalContato" class="modal">
             <div class="modal-content">
                 <span class="fechar">&times;</span>
@@ -49,10 +44,8 @@
                     <label for="mensagem">Mensagem:</label>
                     <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
                     <button type="submit">Enviar Mensagem</button>
-
-<button id="btnContato" class="btnVerde">Entrar em Contato</button>
-<div id="mensagemDoacao"></div>
-
+                    <button id="btnContato" class="btnVerde">Entrar em Contato</button>
+                    <div id="mensagemDoacao"></div>
                 </form>
             </div>
         </div>
