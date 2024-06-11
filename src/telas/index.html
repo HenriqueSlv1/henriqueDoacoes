@@ -13,7 +13,8 @@
     </header>
 
     <main id="paginaInicial">
-        <form id="formDoacao">
+        <form  onsubmit="event.preventDefault(); addDoacoes()">
+          
 
             <label for="nomeDoador">Nome do Doador</label>
             <input type="text" id="nomeDoador" name="nomeDoador" required>
@@ -30,7 +31,7 @@
             <label for="dataValidade">Data de Validade (opcional):</label>
             <input type="date" id="dataValidade" name="dataValidade">
 
-            <button type="submit">Doar Agora</button>
+            <input type="submit">Doar Agora</input>
         </form>
     </main>
 
