@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação de Alimentos</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à nossa plataforma de doação de alimentos!</h1>
+        <p>Ajude-nos a conectar doadores e organizações de caridade locais.</p>
+    </header>
+
+    <main id="paginaInicial">
+        <form id="formDoacao">
+
+            <label for="nomeDoador">Nome do Doador</label>
+            <input type="text" id="nomeDoador" name="nomeDoador" required>
+
+            <label for="numeroDoador">Número Doador</label>
+            <input type="text" id="numeroDoador" name="numeroDoador" required>
+
+            <label for="tipoAlimento">Tipo de Alimento:</label>
+            <input type="text" id="tipoAlimento" name="tipoAlimento" required>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" required>
+
+            <label for="dataValidade">Data de Validade (opcional):</label>
+            <input type="date" id="dataValidade" name="dataValidade">
+
+            <button type="submit">Doar Agora</button>
+        </form>
+    </main>
+
+    <main id="paginaResultados" style="display: none;">
+        <h2>Organizações de Caridade que Aceitam Doações de Alimentos</h2>
+        <ul id="organizacoesLista">
+
+        </ul>
+
+        <div id="modalContato" class="modal">
+            <div class="modal-content">
+                <span class="fechar">&times;</span>
+                <h3>Entre em Contato com o Doador</h3>
+                <form id="formContato">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                    <button type="submit">Enviar Mensagem</button>
+
+<button id="btnContato" class="btnVerde">Entrar em Contato</button>
+<div id="mensagemDoacao"></div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Doação de Alimentos</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
