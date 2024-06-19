@@ -54,12 +54,10 @@ function carregarDoacoes() {
         .then(response => response.json())
         .then(doacoes => {
             const organizacoesLista = document.getElementById('organizacoesLista');
-            organizacoesLista.innerHTML = '' // Limpa o conteúdo atual da lista
             
-            // Itera sobre cada doação e cria um elemento para exibi-la na lista
             doacoes.forEach(doacao => {
-                const li = document.createElement('li')
-                li.classList.add('doacao')
+                const li = document.createElement('li');
+                li.classList.add('doacao');
                 li.innerHTML = `
                     <h2>Nome do Doador: ${doacao.nomeDoador}</h2>
                     <p><strong>Tipo de Alimento:</strong> ${doacao.tipoAlimento}</p>
@@ -67,23 +65,23 @@ function carregarDoacoes() {
                     <p><strong>Data de Validade:</strong> ${doacao.dataValidade}</p>
                     <button class="btnVerde">Entrar em Contato</button>
                     <button class="btnExcluir">Excluir</button>
-                    <div class="mensagemDoacao" style="display: none;">Número do Doador: ${doacao.numeroDoador}</div>
+                    <div class="numeroDoador" style="display: none;">Número do Doador: ${doacao.numeroDoador}</div>
                 `;
-                organizacoesLista.appendChild(li)
+                organizacoesLista.appendChild(li);
 
                 const btnContato = li.querySelector('.btnVerde');
-                const mensagemDoacao = li.querySelector('.mensagemDoacao');
+                const numeroDoador = li.querySelector('.numeroDoador');
                 btnContato.addEventListener('click', function() {
-                    mensagemDoacao.style.display = 'block'
+                    numeroDoador.style.display = 'block';
                 });
 
                 const btnExcluir = li.querySelector('.btnExcluir');
                 btnExcluir.addEventListener('click', function() {
-                    deletarDoacoes(doacao.id)
+                    deletarDoacoes(doacao.id);
                 });
             });
         })
-        .catch(error => console.error('Erro ao carregar as doações:', error))
+        .catch(error => console.error('Erro ao carregar as doações:', error));
 }
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Doação de Alimentos</title>
+    <title>Prato Cheio - Doação de Alimentos</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -27,7 +27,7 @@
             </nav>
 
             <div class="btn-contato">
-                <a href="#"><button>Doe agora</button></a>
+                <a href="#formDoacao"><button>Doe agora</button></a>
             </div>
         </div>
 
@@ -38,50 +38,67 @@
         <h1>Bem-vindos ao Prato Cheio,à nossa plataforma de doação de alimentos!</h1>
     </section>
 
+    <section class="sobreNos">
+        <div class="sobreNosContent">
+            <div class="sobreNosTexto">
+                <h2>Sobre o Prato Cheio</h2>
+                <p>Bem-vindos ao Prato Cheio: Conectando Generosidade com Necessidade
+
+                    No Prato Cheio, nossa missão é simples e poderosa: conectar pessoas generosas que desejam fazer a diferença com organizações que mais precisam. Somos uma plataforma sem fins lucrativos dedicada a facilitar doações de alimentos de forma eficiente e transparente.
+                    
+                    Acreditamos que cada doação pode impactar positivamente a vida de muitas pessoas. Ao unir doadores com instituições e comunidades carentes, buscamos diminuir a fome e promover uma distribuição mais justa de recursos.</p>
+
+                    <h3>Outras instituições abaixo para doação!</h3>
+            </div>
+            <div class="sobreNosLinks">
+                <div class="sobreNosLink">
+                    <a href="https://www.paraquemdoar.com.br/" target="_blank">
+                        <img src="/src/telas/logo-pra-quem-doar.jpeg" alt="Imagem para link 1">
+                    </a>
+                    <h3>Para quem doar</h3>
+                </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+
     <main id="paginaInicial">
-        <div class="bemVindos">
-            <h2>Formulário para preenchimento das doações!</h2>
-            <p>Ajude-nos a promover a solidariedade e a alimentar quem mais precisa através da sua doação. Com a sua colaboração, podemos impactar positivamente a vida do nosso proximo.</p>
-            <img src="./Tiny people standing near box of donation food for delivery.jpg" alt="foto">
-            
+        <div class="imagemLadoFormulario">
+            <div class="form-image">
+                <img src="/undraw_undraw_undraw_undraw_sign_up_ln1s_-1-_s4bc_-1-_ee41_-1-_kf4d.svg" alt="">
+            </div>
         </div>
 
+      <div class="form">
+        
         <form id="formDoacao" onsubmit="event.preventDefault(); addDoacoes()">
-            <label for="nomeDoador">Nome do Doador</label>
-            <input type="text" id="nomeDoador" name="nomeDoador" required>
+            <div class="title">
+                <h1>Cadastre sua Doação</h1>
+            </div>
 
-            <label for="numeroDoador">Número Doador</label>
-            <input type="text" id="numeroDoador" name="numeroDoador" required>
+            <input type="text" id="nomeDoador" name="nomeDoador"  placeholder="Nome do doador" required>
 
-            <label for="tipoAlimento">Tipo de Alimento:</label>
-            <input type="text" id="tipoAlimento" name="tipoAlimento" required>
+            <input type="text" id="numeroDoador" name="numeroDoador" placeholder="Número do Doador" required>
 
-            <label for="quantidade">Quantidade:</label>
-            <input type="number" id="quantidade" name="quantidade" required>
+            <input type="text" id="tipoAlimento" name="tipoAlimento" placeholder="Tipo de alimento" required>
 
-            <label for="dataValidade">Data de Validade (opcional):</label>
-            <input type="date" id="dataValidade" name="dataValidade">
+            <input type="number" id="quantidade" name="quantidade" placeholder="Quantidade" required>
 
-            <input type="submit" value="Doar Agora">
+
+            <input type="date" id="dataValidade" name="dataValidade" placeholder="Data de Validade(opcional)">
+
+            <input class="btn" type="submit" value="Doar Agora">
         </form>
+      </div>
     </main>
 
     <main id="paginaResultados" style="display: none;">
-        <h2>Organizações de Caridade que Aceitam Doações de Alimentos</h2>
+        <h2>Consulte as Doações</h2>
         <ul id="organizacoesLista"></ul>
-        <div id="modalContato" class="modal">
-            <div class="modal-content">
-                <span class="fechar">&times;</span>
-                <h3>Entre em Contato com o Doador</h3>
-                <form id="formContato">
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-                    <button type="submit">Enviar Mensagem</button>
-                    <button id="btnContato" class="btnVerde">Entrar em Contato</button>
-                    <div id="mensagemDoacao"></div>
-                </form>
-            </div>
-        </div>
+    
     </main>
 
     <footer>

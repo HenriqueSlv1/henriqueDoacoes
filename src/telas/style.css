@@ -1,301 +1,24 @@
-    body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
 
-    }
-
-    img{
-        width:700px;
-        padding-right: 289px;
-    }
-
-
-
-    header .link{
-        padding-left: 70%;
-    }
-
-
-.menu ul {
-    list-style-type: none;
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
+    box-sizing: border-box;
 }
 
-.menu ul li {
-    margin-left: 20px; /* Espaçamento entre os itens do menu */
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
-}
-
-.menu ul li a:hover {
-    background-color: #2980b9; /* Cor de fundo ao passar o mouse */
-    border-radius: 5px; /* Borda arredondada ao passar o mouse */
-}
-
-.link ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.link ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.link ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
-}
-
-.link ul li a:hover {
-    background-color: #2980b9; /* Cor de fundo ao passar o mouse */
-    border-radius: 5px; /* Borda arredondada ao passar o mouse */
-}
-
-    footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #f1f1f1;
-    }
-
-    h1 {
-        margin: 0;
-    }
-
-    main {
-        display: flex;
-        justify-content: center; /* Centraliza os elementos na horizontal */
-        align-items: center; /* Centraliza os elementos na vertical */
-        height: 100vh; /* Garante que o main ocupe toda a altura da viewport */
-    }
-    
-
-
-
-    main .bemVindos p{
-      
-            font-size: 20px; /* Tamanho maior para o texto do parágrafo */
-            line-height: 1.8; /* Espaçamento entre linhas */
-            text-align: center; /* Centraliza o texto */
-    }
-
-    .bemVindos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-right: 50px; /* Reduzi o padding-right para não distanciar muito do formulário */
-    }
-    
-    form {
-        display: flex;
-        flex-direction: column;
-        padding: 18px;
-        max-width: 400px;
-        width: 100%; /* Ocupa toda a largura máxima disponível */
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    label, input, textarea, button {
-        width: 100%; /* Ocupa toda a largura do formulário */
-        padding: 10px;
-        box-sizing: border-box;
-        margin-bottom: 15px; /* Espaçamento inferior entre os elementos */
-    }
-    
-    input[type="submit"], button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        cursor: pointer;
-        width: auto; /* Redefine a largura para o tamanho padrão do conteúdo */
-    }
-    
-    input[type="submit"]:hover, button:hover {
-        background-color: #45a049;
-    }
-
-    main#paginaResultados {
-        padding: 20px;
-    }
-
-    ul#organizacoesLista {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .doacao {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        margin-bottom: 10px;
-        background-color: #f9f9f9;
-    }
-
-    .doacao h2 {
-        margin-top: 0;
-    }
-
-    .doacao p {
-        margin-bottom: 5px;
-    }
-
-    .mensagemDoacao {
-        margin-top: 10px;
-    }
-
-    .btnVerde {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    .btnVerde:hover {
-        background-color: #45a049;
-    }
-
-    .btnExcluir{
-        background-color: rgb(240, 41, 41);
-        color: white;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    .btnExcluir:hover{
-        background-color: red;
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.4);
-        padding-top: 60px;
-    }
-
-    .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-    }
-
-    .fechar {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .fechar:hover,
-    .fechar:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-
-
-    #formDoacao {
-        max-width: 600px;
-        margin: 100px ;
-        padding: 20px;
-        
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Estilo para rótulos dos campos */
-    #formDoacao label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-    }
-
-    /* Estilo para os campos de entrada */
-    #formDoacao input[type="text"],
-    #formDoacao input[type="number"],
-    #formDoacao input[type="date"] {
-        width: calc(100% - 20px); /* Considerando o padding de 10px de cada lado */
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-
-    /* Estilo para o botão de enviar */
-    #formDoacao input[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 12px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    #formDoacao input[type="submit"]:hover {
-        background-color: #45a049;
-    }
-
-    /* Estilo para o campo de data de validade */
-    #formDoacao input[type="date"] {
-        width: 100%; /* Preencher todo o espaço disponível */
-    }
-
-
-
-
-html{
-    height: 500vh;
-}
-
-.container{
+.container {
     max-width: 1280px;
     margin: auto;
 }
 
-
-.flex{
+.flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
 }
 
-header{
+header {
     text-align: center;
     align-items: center;
     width: 100%;
@@ -304,49 +27,44 @@ header{
     top: 0;
     left: 0;
     transition: .5s;
-
 }
 
-header.rolagem{
+header.rolagem {
     background-color: rgb(21, 21, 21);
     padding: 20px 4%;
-
 }
 
-header.rolagem a, header.rolagem i {
-    color:rgb(255, 255, 255);
+header.rolagem a,
+header.rolagem i {
+    color: rgb(255, 255, 255);
 }
 
 header svg {
     color: rgb(255, 255, 255);
-    width: 34px;  /* Define a largura desejada */
-    height: 35px; /* Define a altura desejada */
+    width: 45px;
+    height: 35px;
 }
 
-header ul{
+header ul {
     list-style-type: none;
-    padding-right: 80 px;
-
-    
+    padding-right: 0; 
 }
 
-header ul li{
+header ul li {
     display: inline-block;
-    margin: 0 40px;
+    margin: 0 20px; 
     color: rgb(255, 255, 255);
-    padding-right: 19px;
-
 }
 
-header ul li a{
+
+header ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 22px;
     padding-right: 19px;
-
 }
 
-.btn-contato button{
+.btn-contato button {
     width: 120px;
     height: 40px;
     border: 0;
@@ -357,24 +75,22 @@ header ul li a{
     transition: .2s;
 }
 
-.btn-contato button:hover{
+.btn-contato button:hover {
     background-color: #ffffff36;
 }
 
-
-.banner{
+.banner {
     height: 100vh;
     background-image: url(/src/telas/closeup-diverse-people-joining-their-hands.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.banner h1{
+.banner h1 {
     display: flex;
     align-items: center;
     text-align: center;
@@ -382,7 +98,248 @@ header ul li a{
     color: #ffffff;
 }
 
-.banner h1 span{
+.banner h1 span {
     color: green;
 }
-    
+
+/*formulario e tals*/
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#paginaInicial {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+
+.imagemLadoFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 50px;
+    width: 50%;
+}
+
+.form-image {
+    width: 1000%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff41;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 45rem;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 10px;
+    gap: 15px;
+}
+
+img {
+    width: 150px;
+    padding-right: 289px;
+}
+
+#formDoacao .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 60px;
+    color: #333;
+}
+
+#formDoacao {
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#formDoacao input[type="text"],
+#formDoacao input[type="number"],
+#formDoacao input[type="date"],
+#formDoacao input[type="submit"] {
+    margin: auto;
+    padding: 12px;
+    margin-bottom: 24px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 16px; 
+}
+
+#formDoacao input[type="submit"] {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formDoacao input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Resultados */
+main#paginaResultados {
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+ul#organizacoesLista {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.doacao {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.doacao h2 {
+    margin-top: 0;
+}
+
+.doacao p {
+    margin-bottom: 10px;
+}
+
+.numeroDoador {
+    margin-top: 10px;
+    display: none;
+}
+
+.btnVerde {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btnVerde:hover {
+    background-color: #45a049;
+}
+
+.btnExcluir {
+    background-color: rgb(240, 41, 41);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btnExcluir:hover {
+    background-color: red;
+}
+
+input[type="submit"],
+button {
+    width: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #be4444;
+}
+
+
+
+
+
+
+
+
+.sobreNos {
+    background-color: #f2f2f2;
+    padding: 40px 20px;
+    min-height: 500px;
+}
+
+.sobreNosContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sobreNosTexto {
+    max-width: 80%;
+    margin-bottom: 40px;
+}
+
+.sobreNosTexto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.sobreNosTexto p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.sobreNosLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sobreNosLink {
+    width: 250px; 
+    height: 250px;
+    margin: 10px; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sobreNosLink img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sobreNosLink h3 {
+    margin-top: 10px;
+    font-size: 1.2em; 
+    color: #333; 
+    text-align: center;
+}
+
